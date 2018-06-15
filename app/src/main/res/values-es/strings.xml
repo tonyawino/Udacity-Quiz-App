@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Conocimientos generales</string>
+    <string name="question_one">¿Qué bandera de un país tiene la mayor cantidad de estrellas?</string>
+    <string name="question_two">¿Qué significa la \"e\" en el correo electrónico?</string>
+    <string name="question_three">La Habana es la ciudad capital de qué país?</string>
+    <string name="question_four">¿Qué pieza de ajedrez solo se puede mover en diagonal?</string>
+    <string name="question_five">\"Murder on the Orient Express\" protagoniza a ese detective ficticio?</string>
+    <string name="question_six">¿Cuál fue el número de vuelo del avión Pan Am que explotó sobre Escocia en 1988?</string>
+    <string name="question_seven">¿Qué país está organizando la Copa del Mundo de 2026?</string>
+    <string name="question_eight">¿En qué año tuvo lugar la famosa Batalla de Agincourt?</string>
+    <string name="question_one_option_one">Estados Unidos de America</string>
+    <string name="question_one_option_three">Nueva Zelanda</string>
+    <string name="question_one_option_four">Brasil</string>
+    <string name="question_two_option_one">Evento</string>
+    <string name="question_two_option_two">Electrónico</string>
+    <string name="question_two_option_three">Entretenido</string>
+    <string name="question_four_option_one">Empeñar</string>
+    <string name="question_four_option_two">Torre</string>
+    <string name="question_four_option_three">Rey</string>
+    <string name="question_four_option_four">obispo</string>
+    <string name="question_seven_option_one">Estados Unidos de America</string>
+    <string name="question_seven_option_two">Rusia</string>
+    <string name="question_seven_option_three">Canadá</string>
+    <string name="question_seven_option_four">Méjico</string>
+    <string name="answer">Tu puntaje es: %1$d</string>
+    <string name="unanswered">La pregunta %1$s no tiene respuesta</string>
+    <string name="invalid">La pregunta ocho no tiene un año válido</string>
+</resources>
