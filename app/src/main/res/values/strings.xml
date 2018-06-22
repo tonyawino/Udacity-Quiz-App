@@ -1,13 +1,13 @@
 <resources>
     <string name="app_name">General Knowledge</string>
-    <string name="question_one">Which country’s flag has the most stars?</string>
-    <string name="question_two">What does the “e” in e-mail stand for?</string>
-    <string name="question_three">Havana is the capital city of which country?</string>
-    <string name="question_four">Which chess piece can only move diagonally?</string>
-    <string name="question_five">“Murder on the Orient Express” stars which fictional detective?</string>
-    <string name="question_six">What was the flight number of the Pan Am plane that exploded over Scotland in 1988?</string>
-    <string name="question_seven">Which country is hosting the 2026 world cup?</string>
-    <string name="question_eight">In what year did the famous Battle of Agincourt take place? </string>
+    <string name="question_one">1. Which country’s flag has the most stars?</string>
+    <string name="question_two">2. What does the “e” in e-mail stand for?</string>
+    <string name="question_three">3. Havana is the capital city of which country?</string>
+    <string name="question_four">4. Which chess piece can only move diagonally?</string>
+    <string name="question_five">5. “Murder on the Orient Express” stars which fictional detective?</string>
+    <string name="question_six">6. What was the flight number of the Pan Am plane that exploded over Scotland in 1988?</string>
+    <string name="question_seven">7. Which country is hosting the 2026 world cup?</string>
+    <string name="question_eight">8. In what year did the famous Battle of Agincourt take place? </string>
     <string name="question_one_option_one">United States of America</string>
     <string name="question_one_option_two">Portugal</string>
     <string name="question_one_option_three">New Zealand</string>
@@ -24,7 +24,7 @@
     <string name="question_four_option_two">Rook</string>
     <string name="question_four_option_three">King</string>
     <string name="question_four_option_four">Bishop</string>
-    <string name="question_five_option_one">Hercule Poirot</string>
+    <string name="question_five_option_one">Hercule Poirot (A)</string>
     <string name="question_five_option_two">Sherlock Holmes</string>
     <string name="question_five_option_three">Bruce Wayne</string>
     <string name="question_five_option_four">Joe Hardy</string>

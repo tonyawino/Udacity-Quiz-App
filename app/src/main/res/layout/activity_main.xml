@@ -28,9 +28,11 @@
             <RadioGroup
                 android:id="@+id/question_one"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent">
+                android:layout_height="match_parent"
+                android:onClick="group_click">
 
                 <RadioButton
+                    android:id="@+id/one_one"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:paddingLeft="8dp"
@@ -38,6 +40,7 @@
                     android:textSize="16sp" />
 
                 <RadioButton
+                    android:id="@+id/one_two"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:paddingLeft="8dp"
@@ -45,6 +48,7 @@
                     android:textSize="16sp" />
 
                 <RadioButton
+                    android:id="@+id/one_three"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:paddingLeft="8dp"
@@ -52,6 +56,7 @@
                     android:textSize="16sp" />
 
                 <RadioButton
+                    android:id="@+id/one_four"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:paddingLeft="8dp"
@@ -77,9 +82,11 @@
             <RadioGroup
                 android:id="@+id/question_two"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent">
+                android:layout_height="match_parent"
+                android:onClick="group_click">
 
                 <RadioButton
+                    android:id="@+id/two_one"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:paddingLeft="8dp"
@@ -87,6 +94,7 @@
                     android:textSize="16sp" />
 
                 <RadioButton
+                    android:id="@+id/two_two"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:paddingLeft="8dp"
@@ -94,6 +102,7 @@
                     android:textSize="16sp" />
 
                 <RadioButton
+                    android:id="@+id/two_three"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:paddingLeft="8dp"
@@ -101,6 +110,7 @@
                     android:textSize="16sp" />
 
                 <RadioButton
+                    android:id="@+id/two_four"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:paddingLeft="8dp"
@@ -126,9 +136,11 @@
             <RadioGroup
                 android:id="@+id/question_three"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent">
+                android:layout_height="match_parent"
+                android:onClick="group_click">
 
                 <RadioButton
+                    android:id="@+id/three_one"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:paddingLeft="8dp"
@@ -136,6 +148,7 @@
                     android:textSize="16sp" />
 
                 <RadioButton
+                    android:id="@+id/three_two"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:paddingLeft="8dp"
@@ -143,6 +156,7 @@
                     android:textSize="16sp" />
 
                 <RadioButton
+                    android:id="@+id/three_three"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:paddingLeft="8dp"
@@ -150,6 +164,7 @@
                     android:textSize="16sp" />
 
                 <RadioButton
+                    android:id="@+id/three_four"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:paddingLeft="8dp"
@@ -175,9 +190,11 @@
             <RadioGroup
                 android:id="@+id/question_four"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent">
+                android:layout_height="match_parent"
+                android:onClick="group_click">
 
                 <RadioButton
+                    android:id="@+id/four_one"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:paddingLeft="8dp"
@@ -185,6 +202,7 @@
                     android:textSize="16sp" />
 
                 <RadioButton
+                    android:id="@+id/four_two"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:paddingLeft="8dp"
@@ -192,6 +210,7 @@
                     android:textSize="16sp" />
 
                 <RadioButton
+                    android:id="@+id/four_three"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:paddingLeft="8dp"
@@ -199,6 +218,7 @@
                     android:textSize="16sp" />
 
                 <RadioButton
+                    android:id="@+id/four_four"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:paddingLeft="8dp"
@@ -226,33 +246,106 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent">
 
-                <RadioButton
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:paddingLeft="8dp"
-                    android:text="@string/question_five_option_one"
-                    android:textSize="16sp" />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:orientation="horizontal">
 
-                <RadioButton
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:paddingLeft="8dp"
-                    android:text="@string/question_five_option_two"
-                    android:textSize="16sp" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="A."
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
 
-                <RadioButton
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:paddingLeft="8dp"
-                    android:text="@string/question_five_option_three"
-                    android:textSize="16sp" />
+                    <RadioButton
+                        android:id="@+id/hercule_poirot"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:onClick="check"
+                        android:paddingLeft="8dp"
+                        android:textSize="16sp" />
 
-                <RadioButton
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:paddingLeft="8dp"
-                    android:text="@string/question_five_option_four"
-                    android:textSize="16sp" />
+                    <ImageView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:src="@drawable/hercule_poirot" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="8dp"
+                        android:text="B."
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+
+                    <RadioButton
+                        android:id="@+id/sherlock_holmes"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:onClick="check"
+                        android:paddingLeft="8dp"
+                        android:textSize="16sp" />
+
+                    <ImageView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:src="@drawable/sherlock_holmes" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_weight="1"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="C."
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+
+                    <RadioButton
+                        android:id="@+id/bruce_wayne"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:onClick="check"
+                        android:paddingLeft="8dp"
+                        android:textSize="16sp" />
+
+                    <ImageView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:src="@drawable/bruce_wayne" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="8dp"
+                        android:text="D."
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+
+                    <RadioButton
+                        android:id="@+id/joe_hardy"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:onClick="check"
+                        android:paddingLeft="8dp"
+                        android:textSize="16sp" />
+
+                    <ImageView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:src="@drawable/joe_hardy" />
+                </LinearLayout>
             </RadioGroup>
 
             <TextView
@@ -273,9 +366,11 @@
             <RadioGroup
                 android:id="@+id/question_six"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent">
+                android:layout_height="match_parent"
+                android:onClick="group_click">
 
                 <RadioButton
+                    android:id="@+id/six_one"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:paddingLeft="8dp"
@@ -283,6 +378,7 @@
                     android:textSize="16sp" />
 
                 <RadioButton
+                    android:id="@+id/six_two"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:paddingLeft="8dp"
@@ -290,6 +386,7 @@
                     android:textSize="16sp" />
 
                 <RadioButton
+                    android:id="@+id/six_three"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:paddingLeft="8dp"
@@ -297,6 +394,7 @@
                     android:textSize="16sp" />
 
                 <RadioButton
+                    android:id="@+id/six_four"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:paddingLeft="8dp"
@@ -324,6 +422,7 @@
                 android:id="@+id/seven_one"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:onClick="checkbox"
                 android:paddingLeft="8dp"
                 android:text="@string/question_seven_option_one"
                 android:textSize="16sp" />
@@ -332,6 +431,7 @@
                 android:id="@+id/seven_two"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:onClick="checkbox"
                 android:paddingLeft="8dp"
                 android:text="@string/question_seven_option_two"
                 android:textSize="16sp" />
@@ -340,6 +440,7 @@
                 android:id="@+id/seven_three"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:onClick="checkbox"
                 android:paddingLeft="8dp"
                 android:text="@string/question_seven_option_three"
                 android:textSize="16sp" />
@@ -348,6 +449,7 @@
                 android:id="@+id/seven_four"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:onClick="checkbox"
                 android:paddingLeft="8dp"
                 android:text="@string/question_seven_option_four"
                 android:textSize="16sp" />
@@ -397,7 +499,8 @@
         android:layout_gravity="center_horizontal"
         android:layout_marginTop="16dp"
         android:onClick="submit"
-        android:text="submit" />
+        android:text="submit"
+        android:textAllCaps="true" />
 
 
 </LinearLayout>

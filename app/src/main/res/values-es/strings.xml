@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">Conocimientos generales</string>
-    <string name="question_one">¿Qué bandera de un país tiene la mayor cantidad de estrellas?</string>
-    <string name="question_two">¿Qué significa la \"e\" en el correo electrónico?</string>
-    <string name="question_three">La Habana es la ciudad capital de qué país?</string>
-    <string name="question_four">¿Qué pieza de ajedrez solo se puede mover en diagonal?</string>
-    <string name="question_five">\"Murder on the Orient Express\" protagoniza a ese detective ficticio?</string>
-    <string name="question_six">¿Cuál fue el número de vuelo del avión Pan Am que explotó sobre Escocia en 1988?</string>
-    <string name="question_seven">¿Qué país está organizando la Copa del Mundo de 2026?</string>
-    <string name="question_eight">¿En qué año tuvo lugar la famosa Batalla de Agincourt?</string>
+    <string name="question_one">1. ¿Qué bandera de un país tiene la mayor cantidad de estrellas?</string>
+    <string name="question_two">2. ¿Qué significa la e en el correo electrónico?</string>
+    <string name="question_three">3. La Habana es la ciudad capital de qué país?</string>
+    <string name="question_four">4. ¿Qué pieza de ajedrez solo se puede mover en diagonal?</string>
+    <string name="question_five">5. Murder on the Orient Express protagoniza a ese detective ficticio?</string>
+    <string name="question_six">6. ¿Cuál fue el número de vuelo del avión Pan Am que explotó sobre Escocia en 1988?</string>
+    <string name="question_seven">7. ¿Qué país está organizando la Copa del Mundo de 2026?</string>
+    <string name="question_eight">8. ¿En qué año tuvo lugar la famosa Batalla de Agincourt?</string>
     <string name="question_one_option_one">Estados Unidos de America</string>
     <string name="question_one_option_three">Nueva Zelanda</string>
     <string name="question_one_option_four">Brasil</string>
