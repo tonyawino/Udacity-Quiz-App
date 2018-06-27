@@ -13,30 +13,30 @@ import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
-    ViewMainActivity myViewModel;
-    RadioGroup one;
-    RadioGroup two;
-    RadioGroup three;
-    RadioGroup four;
-    RadioGroup five;
-    RadioButton five_one;
-    RadioButton five_two;
-    RadioButton five_three;
-    RadioButton five_four;
-    RadioGroup six;
-    CheckBox seven_one;
-    CheckBox seven_two;
-    CheckBox seven_three;
-    CheckBox seven_four;
-    EditText eight;
-    TextView answer_one;
-    TextView answer_two;
-    TextView answer_three;
-    TextView answer_four;
-    TextView answer_five;
-    TextView answer_six;
-    TextView answer_seven;
-    TextView answer_eight;
+    private ViewMainActivity myViewModel;
+    private RadioGroup one;
+    private RadioGroup two;
+    private RadioGroup three;
+    private RadioGroup four;
+    private RadioGroup five;
+    private RadioButton five_one;
+    private RadioButton five_two;
+    private RadioButton five_three;
+    private RadioButton five_four;
+    private RadioGroup six;
+    private CheckBox seven_one;
+    private CheckBox seven_two;
+    private CheckBox seven_three;
+    private CheckBox seven_four;
+    private EditText eight;
+    private TextView answer_one;
+    private TextView answer_two;
+    private TextView answer_three;
+    private TextView answer_four;
+    private TextView answer_five;
+    private TextView answer_six;
+    private TextView answer_seven;
+    private TextView answer_eight;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -164,14 +164,14 @@ public class MainActivity extends AppCompatActivity {
             toast.show();
 
         } else {
-            grade(one, two, three, four, six, seven_one, seven_two, seven_three, seven_four, eight);
+            grade(one, two, three, four, six, seven_one, seven_three, seven_four, eight);
 
         }
 
     }
 
-    //This method calculates and displays the score
-    private void grade(RadioGroup one, RadioGroup two, RadioGroup three, RadioGroup four, RadioGroup six, CheckBox seven_one, CheckBox seven_two, CheckBox seven_three, CheckBox seven_four, EditText eight) {
+    //This method checks the user's answer, compares it to the correct answer, and then calculates and displays the score
+    private void grade(RadioGroup one, RadioGroup two, RadioGroup three, RadioGroup four, RadioGroup six, CheckBox seven_one, CheckBox seven_three, CheckBox seven_four, EditText eight) {
         int score = 0;
         RadioButton oneselectRadio = findViewById(one.getCheckedRadioButtonId());
         String one_answer = oneselectRadio.getText().toString();
@@ -255,12 +255,8 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
-    //This method is called when a RadioButton in the question five options is clicked
+    //This method is called when a RadioButton in the question five options is clicked, it checks only the clicked button
     public void check(View view) {
-        RadioButton hercule = findViewById(R.id.hercule_poirot);
-        RadioButton sherlock = findViewById(R.id.sherlock_holmes);
-        RadioButton bruce = findViewById(R.id.bruce_wayne);
-        RadioButton joe = findViewById(R.id.joe_hardy);
         if (view.getId() == R.id.hercule_poirot) {
             myViewModel.setFive_one(true);
         }
@@ -273,79 +269,10 @@ public class MainActivity extends AppCompatActivity {
         if (view.getId() == R.id.joe_hardy) {
             myViewModel.setFive_four(true);
         }
-        hercule.setChecked(myViewModel.isFive_one());
-        sherlock.setChecked(myViewModel.isFive_two());
-        bruce.setChecked(myViewModel.isFive_three());
-        joe.setChecked(myViewModel.isFive_four());
+        five_one.setChecked(myViewModel.isFive_one());
+        five_two.setChecked(myViewModel.isFive_two());
+        five_three.setChecked(myViewModel.isFive_three());
+        five_four.setChecked(myViewModel.isFive_four());
     }
 
-    //This method is called when a RadioButton in a RadioGroup is clicked
-    public void group_click(View view) {
-        RadioGroup group = findViewById(view.getId());
-        int checked = group.getCheckedRadioButtonId();
-        if (group.getId() == R.id.question_one) {
-            if (checked == R.id.one_one)
-                myViewModel.setOne_one(true);
-            else if (checked == R.id.one_two)
-                myViewModel.setOne_two(true);
-            else if (checked == R.id.one_three)
-                myViewModel.setOne_three(true);
-            else if (checked == R.id.one_four)
-                myViewModel.setOne_four(true);
-        }
-        if (group.getId() == R.id.question_two) {
-            if (checked == R.id.two_one)
-                myViewModel.setTwo_one(true);
-            else if (checked == R.id.two_two)
-                myViewModel.setTwo_two(true);
-            else if (checked == R.id.two_three)
-                myViewModel.setTwo_three(true);
-            else if (checked == R.id.two_four)
-                myViewModel.setTwo_four(true);
-        }
-        if (group.getId() == R.id.question_three) {
-            if (checked == R.id.three_one)
-                myViewModel.setThree_one(true);
-            else if (checked == R.id.three_two)
-                myViewModel.setThree_two(true);
-            else if (checked == R.id.three_three)
-                myViewModel.setThree_three(true);
-            else if (checked == R.id.three_four)
-                myViewModel.setThree_four(true);
-        }
-        if (group.getId() == R.id.question_four) {
-            if (checked == R.id.four_one)
-                myViewModel.setFour_one(true);
-            else if (checked == R.id.four_two)
-                myViewModel.setFour_two(true);
-            else if (checked == R.id.four_three)
-                myViewModel.setFour_three(true);
-            else if (checked == R.id.four_four)
-                myViewModel.setFour_four(true);
-        }
-        if (group.getId() == R.id.question_six) {
-            if (checked == R.id.six_one)
-                myViewModel.setSix_one(true);
-            else if (checked == R.id.six_two)
-                myViewModel.setSix_two(true);
-            else if (checked == R.id.six_three)
-                myViewModel.setSix_three(true);
-            else if (checked == R.id.six_four)
-                myViewModel.setSix_four(true);
-        }
-    }
-
-    //This method is called when a Checkbox is clicked
-    public void checkbox(View view) {
-        CheckBox checkbox = findViewById(view.getId());
-        if (view.getId() == R.id.seven_one)
-            myViewModel.setSeven_one(checkbox.isChecked());
-        if (view.getId() == R.id.seven_two)
-            myViewModel.setSeven_two(checkbox.isChecked());
-        if (view.getId() == R.id.seven_three)
-            myViewModel.setSeven_three(checkbox.isChecked());
-        if (view.getId() == R.id.seven_four)
-            myViewModel.setSeven_four(checkbox.isChecked());
-
-    }
 }
