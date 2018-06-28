@@ -1,8 +1,8 @@
 package com.example.android.quizapp;
 
 import android.arch.lifecycle.ViewModelProviders;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.CheckBox;
 import android.widget.EditText;
@@ -67,6 +67,68 @@ public class MainActivity extends AppCompatActivity {
         answer_six = findViewById(R.id.answer_six);
         answer_seven = findViewById(R.id.answer_seven);
         answer_eight = findViewById(R.id.answer_eight);
+        design();
+
+
+    }
+
+    //This method recreates the UI on configuration changes
+    private void design() {
+        RadioButton one = null, two = null, three = null, four = null, six = null;
+        if (myViewModel.isOne_one())
+            one = findViewById(R.id.one_one);
+        else if (myViewModel.isOne_two())
+            one = findViewById(R.id.one_two);
+        else if (myViewModel.isOne_three())
+            one = findViewById(R.id.one_three);
+        else if (myViewModel.isOne_four())
+            one = findViewById(R.id.one_four);
+        if (one != null)
+            one.setChecked(true);
+        if (myViewModel.isTwo_one())
+            two = findViewById(R.id.two_one);
+        else if (myViewModel.isTwo_two())
+            two = findViewById(R.id.two_two);
+        else if (myViewModel.isTwo_three())
+            two = findViewById(R.id.two_three);
+        else if (myViewModel.isTwo_four())
+            two = findViewById(R.id.two_four);
+        if (two != null)
+            two.setChecked(true);
+        if (myViewModel.isThree_one())
+            three = findViewById(R.id.three_one);
+        else if (myViewModel.isThree_two())
+            three = findViewById(R.id.three_two);
+        else if (myViewModel.isThree_three())
+            three = findViewById(R.id.three_three);
+        else if (myViewModel.isThree_four())
+            three = findViewById(R.id.three_four);
+        if (three != null)
+            three.setChecked(true);
+        if (myViewModel.isFour_one())
+            four = findViewById(R.id.four_one);
+        else if (myViewModel.isFour_two())
+            four = findViewById(R.id.four_two);
+        else if (myViewModel.isFour_three())
+            four = findViewById(R.id.four_three);
+        else if (myViewModel.isFour_four())
+            four = findViewById(R.id.four_four);
+        if (four != null)
+            four.setChecked(true);
+        if (myViewModel.isSix_one())
+            six = findViewById(R.id.six_one);
+        else if (myViewModel.isSix_two())
+            six = findViewById(R.id.six_two);
+        else if (myViewModel.isSix_three())
+            six = findViewById(R.id.six_three);
+        else if (myViewModel.isSix_four())
+            six = findViewById(R.id.six_four);
+        if (six != null)
+            six.setChecked(true);
+        seven_one.setChecked(myViewModel.isSeven_one());
+        seven_two.setChecked(myViewModel.isSeven_two());
+        seven_three.setChecked(myViewModel.isSeven_three());
+        seven_four.setChecked(myViewModel.isSeven_four());
         answer_one.setText(myViewModel.getAnswer_one());
         answer_two.setText(myViewModel.getAnswer_two());
         answer_three.setText(myViewModel.getAnswer_three());
@@ -75,7 +137,6 @@ public class MainActivity extends AppCompatActivity {
         answer_six.setText(myViewModel.getAnswer_six());
         answer_seven.setText(myViewModel.getAnswer_seven());
         answer_eight.setText(myViewModel.getAnswer_eight());
-
     }
 
     //This method is called when submit is pressed
@@ -246,7 +307,7 @@ public class MainActivity extends AppCompatActivity {
         if (eight_answer.equals(getString(R.string.question_eight_answer))) {
             score++;
             myViewModel.setAnswer_eight("");
-            answer_eight.setText(myViewModel.getAnswer_one());
+            answer_eight.setText(myViewModel.getAnswer_eight());
         } else {
             myViewModel.setAnswer_eight(getString(R.string.question_eight_answer));
             answer_eight.setText(myViewModel.getAnswer_eight());
@@ -274,5 +335,76 @@ public class MainActivity extends AppCompatActivity {
         five_three.setChecked(myViewModel.isFive_three());
         five_four.setChecked(myViewModel.isFive_four());
     }
+
+    //This method resets the user interface
+    public void reset(View view) {
+        one.clearCheck();
+        myViewModel.setOne_one(false);
+        myViewModel.setOne_two(false);
+        myViewModel.setOne_three(false);
+        myViewModel.setOne_four(false);
+        two.clearCheck();
+        myViewModel.setTwo_one(false);
+        myViewModel.setTwo_two(false);
+        myViewModel.setTwo_three(false);
+        myViewModel.setTwo_four(false);
+        three.clearCheck();
+        myViewModel.setThree_one(false);
+        myViewModel.setThree_two(false);
+        myViewModel.setThree_three(false);
+        myViewModel.setThree_four(false);
+        four.clearCheck();
+        myViewModel.setFour_one(false);
+        myViewModel.setFour_two(false);
+        myViewModel.setFour_three(false);
+        myViewModel.setFour_four(false);
+        myViewModel.setFive_one(false);
+        five_one.setChecked(myViewModel.isFive_one());
+        myViewModel.setFive_two(false);
+        five_two.setChecked(myViewModel.isFive_two());
+        myViewModel.setFive_three(false);
+        five_three.setChecked(myViewModel.isFive_three());
+        myViewModel.setFive_four(false);
+        five_four.setChecked(myViewModel.isFive_four());
+        six.clearCheck();
+        myViewModel.setSix_one(false);
+        myViewModel.setSix_two(false);
+        myViewModel.setSix_three(false);
+        myViewModel.setSix_four(false);
+        myViewModel.setSeven_one(false);
+        seven_one.setChecked(myViewModel.isSeven_one());
+        myViewModel.setSeven_two(false);
+        seven_two.setChecked(myViewModel.isSeven_two());
+        myViewModel.setSeven_three(false);
+        seven_three.setChecked(myViewModel.isSeven_three());
+        myViewModel.setSeven_four(false);
+        seven_four.setChecked(myViewModel.isSeven_four());
+        myViewModel.setEight("");
+        eight.setText(myViewModel.getEight());
+        myViewModel.setAnswer_one("");
+        answer_one.setText(myViewModel.getAnswer_one());
+        myViewModel.setAnswer_two("");
+        answer_two.setText(myViewModel.getAnswer_two());
+        myViewModel.setAnswer_three("");
+        answer_three.setText(myViewModel.getAnswer_three());
+        myViewModel.setAnswer_four("");
+        answer_four.setText(myViewModel.getAnswer_four());
+        myViewModel.setAnswer_five("");
+        answer_five.setText(myViewModel.getAnswer_five());
+        myViewModel.setAnswer_six("");
+        answer_six.setText(myViewModel.getAnswer_six());
+        myViewModel.setAnswer_seven("");
+        answer_seven.setText(myViewModel.getAnswer_seven());
+        myViewModel.setAnswer_eight("");
+        answer_eight.setText(myViewModel.getAnswer_eight());
+        eight.setFocusableInTouchMode(false);
+        one.setFocusable(true);
+        one.setFocusableInTouchMode(true);
+        one.requestFocus();
+        one.setFocusable(false);
+        one.setFocusableInTouchMode(false);
+        eight.setFocusableInTouchMode(true);
+    }
+
 
 }
