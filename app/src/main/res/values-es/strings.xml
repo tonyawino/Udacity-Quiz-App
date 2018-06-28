@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">Conocimientos generales</string>
+    <string name="app_name">Quiz App</string>
     <string name="question_one">1. ¿Qué bandera de un país tiene la mayor cantidad de estrellas?</string>
     <string name="question_two">2. ¿Qué significa la e en el correo electrónico?</string>
     <string name="question_three">3. La Habana es la ciudad capital de qué país?</string>
