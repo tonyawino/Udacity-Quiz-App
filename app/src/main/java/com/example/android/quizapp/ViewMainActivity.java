@@ -50,11 +50,18 @@ public class ViewMainActivity extends ViewModel {
         return one_one;
     }
 
+    //If the value is true, make all other choices false, otherwise leave them as they were, this applies to all mutator methods in questions
+    //with RadioButtons
+
     public void setOne_one(boolean check) {
-        one_one = check;
-        one_two = !check;
-        one_three = !check;
-        one_four = !check;
+        if (check){
+            one_one = check;
+            one_two = !check;
+            one_three = !check;
+            one_four = !check;
+        }
+        else
+            one_one=check;
     }
 
     public boolean isOne_two() {
@@ -62,10 +69,14 @@ public class ViewMainActivity extends ViewModel {
     }
 
     public void setOne_two(boolean check) {
-        one_one = !check;
-        one_two = check;
-        one_three = !check;
-        one_four = !check;
+        if (check){
+            one_one = !check;
+            one_two = check;
+            one_three = !check;
+            one_four = !check;
+        }
+        else
+            one_two=check;
     }
 
     public boolean isOne_three() {
@@ -73,10 +84,14 @@ public class ViewMainActivity extends ViewModel {
     }
 
     public void setOne_three(boolean check) {
-        one_one = !check;
-        one_two = !check;
-        one_three = check;
-        one_four = !check;
+        if (check){
+            one_one = !check;
+            one_two = !check;
+            one_three = check;
+            one_four = !check;
+        }
+        else
+            one_three=check;
     }
 
     public boolean isOne_four() {
@@ -84,10 +99,14 @@ public class ViewMainActivity extends ViewModel {
     }
 
     public void setOne_four(boolean check) {
-        one_one = !check;
-        one_two = !check;
-        one_three = !check;
-        one_four = check;
+        if (check){
+            one_one = !check;
+            one_two = !check;
+            one_three = !check;
+            one_four = check;
+        }
+        else
+            one_four=check;
     }
 
     public boolean isTwo_one() {
@@ -95,10 +114,14 @@ public class ViewMainActivity extends ViewModel {
     }
 
     public void setTwo_one(boolean check) {
-        two_one = check;
-        two_two = !check;
-        two_three = !check;
-        two_four = !check;
+        if (check){
+            two_one = check;
+            two_two = !check;
+            two_three = !check;
+            two_four = !check;
+        }
+        else
+            two_one=check;
     }
 
     public boolean isTwo_two() {
@@ -106,10 +129,14 @@ public class ViewMainActivity extends ViewModel {
     }
 
     public void setTwo_two(boolean check) {
-        two_one = !check;
-        two_two = check;
-        two_three = !check;
-        two_four = !check;
+        if (check){
+            two_one = !check;
+            two_two = check;
+            two_three = !check;
+            two_four = !check;
+        }
+        else
+            two_two=check;
     }
 
     public boolean isTwo_three() {
@@ -117,10 +144,14 @@ public class ViewMainActivity extends ViewModel {
     }
 
     public void setTwo_three(boolean check) {
-        two_one = !check;
-        two_two = !check;
-        two_three = check;
-        two_four = !check;
+        if (check){
+            two_one = !check;
+            two_two = !check;
+            two_three = check;
+            two_four = !check;
+        }
+        else
+            two_three=check;
     }
 
     public boolean isTwo_four() {
@@ -128,10 +159,14 @@ public class ViewMainActivity extends ViewModel {
     }
 
     public void setTwo_four(boolean check) {
-        two_one = !check;
-        two_two = !check;
-        two_three = !check;
-        two_four = check;
+        if (check){
+            two_one = !check;
+            two_two = !check;
+            two_three = !check;
+            two_four = check;
+        }
+        else
+            two_four=check;
     }
 
     public boolean isThree_one() {
@@ -139,10 +174,14 @@ public class ViewMainActivity extends ViewModel {
     }
 
     public void setThree_one(boolean check) {
-        three_one = check;
-        three_two = !check;
-        three_three = !check;
-        three_four = !check;
+        if (check){
+            three_one = check;
+            three_two = !check;
+            three_three = !check;
+            three_four = !check;
+        }
+        else
+            three_one=check;
     }
 
     public boolean isThree_two() {
@@ -150,10 +189,14 @@ public class ViewMainActivity extends ViewModel {
     }
 
     public void setThree_two(boolean check) {
-        three_one = !check;
-        three_two = check;
-        three_three = !check;
-        three_four = !check;
+        if (check){
+            three_one = !check;
+            three_two = check;
+            three_three = !check;
+            three_four = !check;
+        }
+        else
+            three_two=check;
     }
 
     public boolean isThree_three() {
@@ -161,10 +204,14 @@ public class ViewMainActivity extends ViewModel {
     }
 
     public void setThree_three(boolean check) {
-        three_one = !check;
-        three_two = !check;
-        three_three = check;
-        three_four = !check;
+        if (check){
+            three_one = !check;
+            three_two = !check;
+            three_three = check;
+            three_four = !check;
+        }
+        else
+            three_three=check;
     }
 
     public boolean isThree_four() {
@@ -172,10 +219,14 @@ public class ViewMainActivity extends ViewModel {
     }
 
     public void setThree_four(boolean check) {
-        three_one = !check;
-        three_two = !check;
-        three_three = !check;
-        three_four = check;
+        if (check){
+            three_one = !check;
+            three_two = !check;
+            three_three = !check;
+            three_four = check;
+        }
+        else
+            three_four=check;
     }
 
     public boolean isFour_one() {
@@ -183,10 +234,14 @@ public class ViewMainActivity extends ViewModel {
     }
 
     public void setFour_one(boolean check) {
-        four_one = check;
-        four_two = !check;
-        four_three = !check;
-        four_four = !check;
+        if (check){
+            four_one = check;
+            four_two = !check;
+            four_three = !check;
+            four_four = !check;
+        }
+        else
+            four_one=check;
     }
 
     public boolean isFour_two() {
@@ -194,10 +249,14 @@ public class ViewMainActivity extends ViewModel {
     }
 
     public void setFour_two(boolean check) {
-        four_one = !check;
-        four_two = check;
-        four_three = !check;
-        four_four = !check;
+        if (check){
+            four_one = !check;
+            four_two = check;
+            four_three = !check;
+            four_four = !check;
+        }
+        else
+            four_two=check;
     }
 
     public boolean isFour_three() {
@@ -205,10 +264,14 @@ public class ViewMainActivity extends ViewModel {
     }
 
     public void setFour_three(boolean check) {
-        four_one = !check;
-        four_two = !check;
-        four_three = check;
-        four_four = !check;
+        if (check){
+            four_one = !check;
+            four_two = !check;
+            four_three = check;
+            four_four = !check;
+        }
+        else
+            four_three=check;
     }
 
     public boolean isFour_four() {
@@ -216,10 +279,14 @@ public class ViewMainActivity extends ViewModel {
     }
 
     public void setFour_four(boolean check) {
-        four_one = !check;
-        four_two = !check;
-        four_three = !check;
-        four_four = check;
+        if (check){
+            four_one = !check;
+            four_two = !check;
+            four_three = !check;
+            four_four = check;
+        }
+        else
+            four_four=check;
     }
 
     public boolean isFive_one() {
@@ -227,10 +294,14 @@ public class ViewMainActivity extends ViewModel {
     }
 
     public void setFive_one(boolean check) {
-        five_one = check;
-        five_two = !check;
-        five_three = !check;
-        five_four = !check;
+        if (check){
+            five_one = check;
+            five_two = !check;
+            five_three = !check;
+            five_four = !check;
+        }
+        else
+            five_one=check;
     }
 
     public boolean isFive_two() {
@@ -238,10 +309,14 @@ public class ViewMainActivity extends ViewModel {
     }
 
     public void setFive_two(boolean check) {
-        five_one = !check;
-        five_two = check;
-        five_three = !check;
-        five_four = !check;
+        if (check){
+            five_one = !check;
+            five_two = check;
+            five_three = !check;
+            five_four = !check;
+        }
+        else
+            five_two=check;
     }
 
     public boolean isFive_three() {
@@ -249,10 +324,14 @@ public class ViewMainActivity extends ViewModel {
     }
 
     public void setFive_three(boolean check) {
-        five_one = !check;
-        five_two = !check;
-        five_three = check;
-        five_four = !check;
+        if (check){
+            five_one = !check;
+            five_two = !check;
+            five_three = check;
+            five_four = !check;
+        }
+        else
+            five_three=check;
     }
 
     public boolean isFive_four() {
@@ -260,10 +339,14 @@ public class ViewMainActivity extends ViewModel {
     }
 
     public void setFive_four(boolean check) {
-        five_one = !check;
-        five_two = !check;
-        five_three = !check;
-        five_four = check;
+        if (check){
+            five_one = !check;
+            five_two = !check;
+            five_three = !check;
+            five_four = check;
+        }
+        else
+            five_four=check;
     }
 
     public boolean isSix_one() {
@@ -271,10 +354,14 @@ public class ViewMainActivity extends ViewModel {
     }
 
     public void setSix_one(boolean check) {
-        six_one = check;
-        six_two = !check;
-        six_three = !check;
-        six_four = !check;
+        if (check){
+            six_one = check;
+            six_two = !check;
+            six_three = !check;
+            six_four = !check;
+        }
+        else
+            six_one=check;
     }
 
     public boolean isSix_two() {
@@ -282,10 +369,14 @@ public class ViewMainActivity extends ViewModel {
     }
 
     public void setSix_two(boolean check) {
-        six_one = !check;
-        six_two = check;
-        six_three = !check;
-        six_four = !check;
+        if (check){
+            six_one = !check;
+            six_two = check;
+            six_three = !check;
+            six_four = !check;
+        }
+        else
+            six_two=check;
     }
 
     public boolean isSix_three() {
@@ -293,10 +384,14 @@ public class ViewMainActivity extends ViewModel {
     }
 
     public void setSix_three(boolean check) {
-        six_one = !check;
-        six_two = !check;
-        six_three = check;
-        six_four = !check;
+        if (check){
+            six_one = !check;
+            six_two = !check;
+            six_three = check;
+            six_four = !check;
+        }
+        else
+            six_three=check;
     }
 
     public boolean isSix_four() {
@@ -304,10 +399,14 @@ public class ViewMainActivity extends ViewModel {
     }
 
     public void setSix_four(boolean check) {
-        six_one = !check;
-        six_two = !check;
-        six_three = !check;
-        six_four = check;
+        if (check){
+            six_one = !check;
+            six_two = !check;
+            six_three = !check;
+            six_four = check;
+        }
+        else
+            six_four=check;
     }
 
     public boolean isSeven_one() {

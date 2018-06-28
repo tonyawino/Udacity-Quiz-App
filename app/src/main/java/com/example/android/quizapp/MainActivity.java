@@ -68,63 +68,69 @@ public class MainActivity extends AppCompatActivity {
         answer_seven = findViewById(R.id.answer_seven);
         answer_eight = findViewById(R.id.answer_eight);
         design();
+        if (!myViewModel.isOne_one() && !myViewModel.isOne_two() && !myViewModel.isOne_three() && !myViewModel.isOne_four())
+            reset(findViewById(R.id.reset));
 
 
     }
 
     //This method recreates the UI on configuration changes
     private void design() {
-        RadioButton one = null, two = null, three = null, four = null, six = null;
         if (myViewModel.isOne_one())
-            one = findViewById(R.id.one_one);
+            this.one.check(R.id.one_one);
         else if (myViewModel.isOne_two())
-            one = findViewById(R.id.one_two);
+            this.one.check(R.id.one_two);
         else if (myViewModel.isOne_three())
-            one = findViewById(R.id.one_three);
+            this.one.check(R.id.one_three);
         else if (myViewModel.isOne_four())
-            one = findViewById(R.id.one_four);
-        if (one != null)
-            one.setChecked(true);
+            this.one.check(R.id.one_four);
+        else
+            this.one.check(-1);
+
         if (myViewModel.isTwo_one())
-            two = findViewById(R.id.two_one);
+            this.two.check(R.id.two_one);
         else if (myViewModel.isTwo_two())
-            two = findViewById(R.id.two_two);
+            this.two.check(R.id.two_two);
         else if (myViewModel.isTwo_three())
-            two = findViewById(R.id.two_three);
+            this.two.check(R.id.two_three);
         else if (myViewModel.isTwo_four())
-            two = findViewById(R.id.two_four);
-        if (two != null)
-            two.setChecked(true);
+            this.two.check(R.id.two_four);
+        else
+            this.two.check(-1);
+
         if (myViewModel.isThree_one())
-            three = findViewById(R.id.three_one);
+            this.three.check(R.id.three_one);
         else if (myViewModel.isThree_two())
-            three = findViewById(R.id.three_two);
+            this.three.check(R.id.three_two);
         else if (myViewModel.isThree_three())
-            three = findViewById(R.id.three_three);
+            this.three.check(R.id.three_three);
         else if (myViewModel.isThree_four())
-            three = findViewById(R.id.three_four);
-        if (three != null)
-            three.setChecked(true);
+            this.three.check(R.id.three_four);
+        else
+            this.three.check(-1);
+
         if (myViewModel.isFour_one())
-            four = findViewById(R.id.four_one);
+            this.four.check(R.id.four_one);
         else if (myViewModel.isFour_two())
-            four = findViewById(R.id.four_two);
+            this.four.check(R.id.four_two);
         else if (myViewModel.isFour_three())
-            four = findViewById(R.id.four_three);
+            this.four.check(R.id.four_three);
         else if (myViewModel.isFour_four())
-            four = findViewById(R.id.four_four);
-        if (four != null)
-            four.setChecked(true);
+            this.four.check(R.id.four_four);
+        else
+            this.four.check(-1);
+
         if (myViewModel.isSix_one())
-            six = findViewById(R.id.six_one);
+            this.six.check(R.id.six_one);
         else if (myViewModel.isSix_two())
-            six = findViewById(R.id.six_two);
+            this.six.check(R.id.six_two);
         else if (myViewModel.isSix_three())
-            six = findViewById(R.id.six_three);
+            this.six.check(R.id.six_three);
         else if (myViewModel.isSix_four())
-            six = findViewById(R.id.six_four);
-        if (six != null)
-            six.setChecked(true);
+            this.six.check(R.id.six_four);
+        else
+            this.six.check(-1);
+
         seven_one.setChecked(myViewModel.isSeven_one());
         seven_two.setChecked(myViewModel.isSeven_two());
         seven_three.setChecked(myViewModel.isSeven_three());
@@ -338,26 +344,26 @@ public class MainActivity extends AppCompatActivity {
 
     //This method resets the user interface
     public void reset(View view) {
-        one.clearCheck();
         myViewModel.setOne_one(false);
         myViewModel.setOne_two(false);
         myViewModel.setOne_three(false);
         myViewModel.setOne_four(false);
-        two.clearCheck();
+        one.clearCheck();
         myViewModel.setTwo_one(false);
         myViewModel.setTwo_two(false);
         myViewModel.setTwo_three(false);
         myViewModel.setTwo_four(false);
-        three.clearCheck();
+        two.clearCheck();
         myViewModel.setThree_one(false);
         myViewModel.setThree_two(false);
         myViewModel.setThree_three(false);
         myViewModel.setThree_four(false);
-        four.clearCheck();
+        three.clearCheck();
         myViewModel.setFour_one(false);
         myViewModel.setFour_two(false);
         myViewModel.setFour_three(false);
         myViewModel.setFour_four(false);
+        four.clearCheck();
         myViewModel.setFive_one(false);
         five_one.setChecked(myViewModel.isFive_one());
         myViewModel.setFive_two(false);
@@ -366,11 +372,11 @@ public class MainActivity extends AppCompatActivity {
         five_three.setChecked(myViewModel.isFive_three());
         myViewModel.setFive_four(false);
         five_four.setChecked(myViewModel.isFive_four());
-        six.clearCheck();
         myViewModel.setSix_one(false);
         myViewModel.setSix_two(false);
         myViewModel.setSix_three(false);
         myViewModel.setSix_four(false);
+        six.clearCheck();
         myViewModel.setSeven_one(false);
         seven_one.setChecked(myViewModel.isSeven_one());
         myViewModel.setSeven_two(false);
@@ -405,6 +411,4 @@ public class MainActivity extends AppCompatActivity {
         one.setFocusableInTouchMode(false);
         eight.setFocusableInTouchMode(true);
     }
-
-
 }
