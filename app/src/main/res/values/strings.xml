@@ -37,7 +37,7 @@
     <string name="question_seven_option_three">Canada</string>
     <string name="question_seven_option_four">Mexico</string>
     <string name="question_eight_answer">1415</string>
-    <string name="answer">Your score is: %1$d</string>
+    <string name="answer">Your score is: %1$d out of 8</string>
     <string name="unanswered">Question %1$s is unanswered</string>
     <string name="invalid">Question eight does not have a valid year</string>
 

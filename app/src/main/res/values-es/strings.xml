@@ -23,7 +23,7 @@
     <string name="question_seven_option_two">Rusia</string>
     <string name="question_seven_option_three">Canadá</string>
     <string name="question_seven_option_four">Méjico</string>
-    <string name="answer">Tu puntaje es: %1$d</string>
+    <string name="answer">Tu puntaje es: %1$d de 8</string>
     <string name="unanswered">La pregunta %1$s no tiene respuesta</string>
     <string name="invalid">La pregunta ocho no tiene un año válido</string>
 </resources>
