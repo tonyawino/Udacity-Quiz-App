@@ -68,9 +68,6 @@ public class MainActivity extends AppCompatActivity {
         answer_seven = findViewById(R.id.answer_seven);
         answer_eight = findViewById(R.id.answer_eight);
         design();
-        if (!myViewModel.isOne_one() && !myViewModel.isOne_two() && !myViewModel.isOne_three() && !myViewModel.isOne_four())
-            reset(findViewById(R.id.reset));
-
 
     }
 
@@ -256,68 +253,68 @@ public class MainActivity extends AppCompatActivity {
         if (one_answer.equals(getString(R.string.question_one_option_one))) {
             score++;
             myViewModel.setAnswer_one("");
-            answer_one.setText(myViewModel.getAnswer_one());
         } else {
             myViewModel.setAnswer_one(getString(R.string.question_one_option_one));
-            answer_one.setText(myViewModel.getAnswer_one());
         }
+        answer_one.setText(myViewModel.getAnswer_one());
+
 
         if (two_answer.equals(getString(R.string.question_two_option_two))) {
             score++;
             myViewModel.setAnswer_two("");
-            answer_two.setText(myViewModel.getAnswer_two());
         } else {
             myViewModel.setAnswer_two(getString(R.string.question_two_option_two));
-            answer_two.setText(myViewModel.getAnswer_two());
         }
+        answer_two.setText(myViewModel.getAnswer_two());
+
         if (three_answer.equals(getString(R.string.question_three_option_three))) {
             score++;
             myViewModel.setAnswer_three("");
-            answer_three.setText(myViewModel.getAnswer_three());
         } else {
             myViewModel.setAnswer_three(getString(R.string.question_three_option_three));
-            answer_three.setText(myViewModel.getAnswer_three());
         }
+        answer_three.setText(myViewModel.getAnswer_three());
+
         if (four_answer.equals(getString(R.string.question_four_option_four))) {
             score++;
             myViewModel.setAnswer_four("");
-            answer_four.setText(myViewModel.getAnswer_four());
         } else {
             myViewModel.setAnswer_four(getString(R.string.question_four_option_four));
-            answer_four.setText(myViewModel.getAnswer_four());
         }
+        answer_four.setText(myViewModel.getAnswer_four());
+
         if (fiveselectRadio.isChecked()) {
             score++;
             myViewModel.setAnswer_five("");
-            answer_five.setText(myViewModel.getAnswer_five());
         } else {
             myViewModel.setAnswer_five(getString(R.string.question_five_option_one));
-            answer_five.setText(myViewModel.getAnswer_five());
         }
+        answer_five.setText(myViewModel.getAnswer_five());
+
         if (six_answer.equals(getString(R.string.question_six_option_three))) {
             score++;
             myViewModel.setAnswer_six("");
-            answer_six.setText(myViewModel.getAnswer_six());
         } else {
             myViewModel.setAnswer_six(getString(R.string.question_six_option_three));
-            answer_six.setText(myViewModel.getAnswer_six());
         }
+        answer_six.setText(myViewModel.getAnswer_six());
+
         if (seven_one.isChecked() && seven_three.isChecked() && seven_four.isChecked()) {
             score++;
             myViewModel.setAnswer_seven("");
-            answer_seven.setText(myViewModel.getAnswer_seven());
         } else {
             myViewModel.setAnswer_seven(getString(R.string.question_seven_option_one) + ", " + getString(R.string.question_seven_option_three) + ", " + getString(R.string.question_seven_option_four));
-            answer_seven.setText(myViewModel.getAnswer_seven());
         }
+        answer_seven.setText(myViewModel.getAnswer_seven());
+
         if (eight_answer.equals(getString(R.string.question_eight_answer))) {
             score++;
             myViewModel.setAnswer_eight("");
-            answer_eight.setText(myViewModel.getAnswer_eight());
         } else {
             myViewModel.setAnswer_eight(getString(R.string.question_eight_answer));
-            answer_eight.setText(myViewModel.getAnswer_eight());
         }
+        answer_eight.setText(myViewModel.getAnswer_eight());
+
         Toast.makeText(getApplicationContext(), getString(R.string.answer, score), Toast.LENGTH_SHORT).show();
 
     }
