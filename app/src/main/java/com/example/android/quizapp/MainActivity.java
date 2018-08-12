@@ -228,14 +228,14 @@ public class MainActivity extends AppCompatActivity {
             toast.show();
 
         } else {
-            grade(one, two, three, four, six, seven_one, seven_three, seven_four, eight);
+            grade(one, two, three, four, six, seven_one, seven_two, seven_three, seven_four, eight);
 
         }
 
     }
 
     //This method checks the user's answer, compares it to the correct answer, and then calculates and displays the score
-    private void grade(RadioGroup one, RadioGroup two, RadioGroup three, RadioGroup four, RadioGroup six, CheckBox seven_one, CheckBox seven_three, CheckBox seven_four, EditText eight) {
+    private void grade(RadioGroup one, RadioGroup two, RadioGroup three, RadioGroup four, RadioGroup six, CheckBox seven_one, CheckBox seven_two, CheckBox seven_three, CheckBox seven_four, EditText eight) {
         int score = 0;
         RadioButton oneselectRadio = findViewById(one.getCheckedRadioButtonId());
         String one_answer = oneselectRadio.getText().toString();
@@ -299,7 +299,7 @@ public class MainActivity extends AppCompatActivity {
         }
         answer_six.setText(myViewModel.getAnswer_six());
 
-        if (seven_one.isChecked() && seven_three.isChecked() && seven_four.isChecked()) {
+        if (seven_one.isChecked() && seven_three.isChecked() && seven_four.isChecked() && !seven_two.isChecked()) {
             score++;
             myViewModel.setAnswer_seven("");
         } else {
